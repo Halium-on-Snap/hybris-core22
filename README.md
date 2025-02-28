@@ -1,6 +1,6 @@
-# mesa libraries for core22 snaps
+# libhybris libraries for core22 snaps
 
-A content snap providing the mesa userspace libraries and drivers for core22
+A content snap providing the libhybris userspace libraries and drivers for core22
 
 This supplies the graphics-core22 content interface:
 
