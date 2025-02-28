@@ -17,8 +17,8 @@ VK_LAYER_PATH=${VK_LAYER_PATH:+$VK_LAYER_PATH:}${SELF}/share/vulkan/implicit_lay
 XDG_DATA_DIRS=${XDG_DATA_DIRS:+$XDG_DATA_DIRS:}${SELF}/share
 
 # libhybris setup & tls-padding
-HYBRIS_LINKER_DIR=${HYBRIS_LINKER_DIR:+$HYBRIS_LINKER_DIR:}${SELF}/lib/${arch}/libhybris/linker
-HYBRIS_EGLPLATFORM_DIR=${HYBRIS_EGLPLATFORM_DIR:+$HYBRIS_EGLPLATFORM_DIR:}${SELF}/lib/${arch}/libhybris
+HYBRIS_LINKER_DIR=${SELF}/lib/${arch}/libhybris/linker
+HYBRIS_EGLPLATFORM_DIR=${SELF}/lib/${arch}/libhybris
 LD_PRELOAD=${LD_PRELOAD:+$LD_PRELOAD:}${SELF}/lib/${arch}/libtls-padding.so
 
 # These are in the default LD_LIBRARY_PATH, but we don't want those.

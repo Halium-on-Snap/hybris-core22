@@ -17,7 +17,7 @@ website: https://github.com/canonical/mesa-core22
 contact: https://github.com/canonical/mesa-core22/issues
 
 compression: lzo
-adopt-info: dri
+version: "latest"
 
 grade: stable
 confinement: strict
@@ -105,7 +105,6 @@ parts:
     override-stage: |
       sed -i 's@/usr/lib/[a-z0-9_-]\+/@@' ${CRAFT_PART_INSTALL}/usr/share/vulkan/*/*.json
       craftctl default
-      craftctl set version=$( apt-cache policy libgl1-mesa-dri | sed -rne 's/^\s+Candidate:\s+([^-]*)-.+$/\1/p' )
 
   x11:
     # X11 support (not much cost to having this)
@@ -197,6 +196,14 @@ parts:
       DESTDIR=$CRAFT_PART_INSTALL make install
     override-prime: |
       craftctl default
+      # Move libhybris where it belongs
+      rm -f ${CRAFT_PRIME}/usr/lib/*.la
+      [ -e ${CRAFT_PRIME}/usr/lib/libEGL_libhybris.so ] && \
+          mv ${CRAFT_PRIME}/usr/lib/*.so* ${CRAFT_PRIME}/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}/
+      [ -d ${CRAFT_PRIME}/usr/lib/libhybris ] && \
+        mv ${CRAFT_PRIME}/usr/lib/libhybris ${CRAFT_PRIME}/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}/
+      [ -d ${CRAFT_PRIME}/usr/lib/pkgconfig ] && \
+        rm -rf ${CRAFT_PRIME}/usr/lib/pkgconfig
     # prime:
     #   - usr/lib
 
