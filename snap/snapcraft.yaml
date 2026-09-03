@@ -176,6 +176,8 @@ parts:
       - libwayland-dev
       - libwayland-egl-backend-dev
       - libglvnd-dev
+      - libxrandr-dev
+      - libvulkan-dev
     build-environment:
       - CFLAGS: -Wno-pointer-to-int-cast
       - CXXFLAGS: -Wno-pointer-to-int-cast
@@ -190,7 +192,8 @@ parts:
       ./configure --prefix=/usr --enable-arch=$ARCH --enable-wayland --enable-glvnd \
           --with-android-headers=$CRAFT_STAGE/usr/include/android \
           --enable-mali-quirks --enable-experimental --enable-debug --enable-trace \
-          --with-default-hybris-ld-library-path=$HYBRISLDPATH --with-default-egl-platform=wayland
+          --with-default-hybris-ld-library-path=$HYBRISLDPATH --with-default-egl-platform=wayland \
+          --enable-vulkan-x11-stubs
       CFLAGS=-Wno-pointer-to-int-cast CXXFLAGS=-Wno-pointer-to-int-cast make -j$(nproc --all)
       DESTDIR=$CRAFT_PART_INSTALL make install
     override-prime: |
