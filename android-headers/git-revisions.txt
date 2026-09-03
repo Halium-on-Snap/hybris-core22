@@ -1,0 +1,112 @@
+================================================
+bionic @ Sat Jun  6 16:00:47 EEST 2026
+================================================
++ cd /home/nekit/halium-11.0
++ repo status bionic
+nothing to commit (working directory clean)
++ cd /home/nekit/halium-11.0/bionic
++ git show-ref --head
+ecf6d056d329d737d4d3f38213d52e787c14035d HEAD
+3a003876ad043c5280e0fbb334e8d17c3d941bfc refs/remotes/github/lineage-18.1
+3a003876ad043c5280e0fbb334e8d17c3d941bfc refs/remotes/m/halium-11.0
++ git remote -v
+github	https://github.com/LineageOS/android_bionic (fetch)
+github	https://github.com/LineageOS/android_bionic (push)
+
+
+================================================
+hardware/libhardware @ Sat Jun  6 16:00:47 EEST 2026
+================================================
++ cd /home/nekit/halium-11.0
++ repo status hardware/libhardware
+nothing to commit (working directory clean)
++ cd /home/nekit/halium-11.0/hardware/libhardware
++ git show-ref --head
+4a374c17d502dd1d1628c8fe0065e908f39473b5 HEAD
+90e3ce2014c258736729a8da929f76d50dc19255 refs/remotes/github/lineage-18.1
+90e3ce2014c258736729a8da929f76d50dc19255 refs/remotes/m/halium-11.0
++ git remote -v
+github	https://github.com/LineageOS/android_hardware_libhardware (fetch)
+github	https://github.com/LineageOS/android_hardware_libhardware (push)
+
+
+================================================
+hardware/libhardware_legacy @ Sat Jun  6 16:00:47 EEST 2026
+================================================
++ cd /home/nekit/halium-11.0
++ repo status hardware/libhardware_legacy
+nothing to commit (working directory clean)
++ cd /home/nekit/halium-11.0/hardware/libhardware_legacy
++ git show-ref --head
+22f705057482747bd4b7c5f3e9d60a12a4558257 HEAD
+3d8e91ff970ad955ad15632f47ceab4e97419041 refs/remotes/m/halium-11.0
+3d8e91ff970ad955ad15632f47ceab4e97419041 refs/tags/android-11.0.0_r46
++ git remote -v
+aosp	https://android.googlesource.com/platform/hardware/libhardware_legacy (fetch)
+aosp	https://android.googlesource.com/platform/hardware/libhardware_legacy (push)
+
+
+================================================
+system/core @ Sat Jun  6 16:00:47 EEST 2026
+================================================
++ cd /home/nekit/halium-11.0
++ repo status system/core
+nothing to commit (working directory clean)
++ cd /home/nekit/halium-11.0/system/core
++ git show-ref --head
+9177d014fa10fb636572e8379a13b4a042365c7b HEAD
+b5f8d6741cae769ef8390d44b77dca9708ccfa32 refs/remotes/github/lineage-18.1
+b5f8d6741cae769ef8390d44b77dca9708ccfa32 refs/remotes/m/halium-11.0
++ git remote -v
+github	https://github.com/LineageOS/android_system_core (fetch)
+github	https://github.com/LineageOS/android_system_core (push)
+
+
+================================================
+system/media @ Sat Jun  6 16:00:47 EEST 2026
+================================================
++ cd /home/nekit/halium-11.0
++ repo status system/media
+nothing to commit (working directory clean)
++ cd /home/nekit/halium-11.0/system/media
++ git show-ref --head
+b432f63fcbf6fecb43631ac8ef0454fa770182a4 HEAD
+b432f63fcbf6fecb43631ac8ef0454fa770182a4 refs/remotes/github/lineage-18.1
+b432f63fcbf6fecb43631ac8ef0454fa770182a4 refs/remotes/m/halium-11.0
++ git remote -v
+github	https://github.com/LineageOS/android_system_media (fetch)
+github	https://github.com/LineageOS/android_system_media (push)
+
+
+================================================
+external/kernel-headers @ Sat Jun  6 16:00:47 EEST 2026
+================================================
++ cd /home/nekit/halium-11.0
++ repo status external/kernel-headers
+nothing to commit (working directory clean)
++ cd /home/nekit/halium-11.0/external/kernel-headers
++ git show-ref --head
+98de591de8a89211e0d97ce6da031ec142ee8b86 HEAD
+f88628cc2c0afb7a6a61f3c835d19179f00d6e16 refs/remotes/m/halium-11.0
+f88628cc2c0afb7a6a61f3c835d19179f00d6e16 refs/tags/android-11.0.0_r46
++ git remote -v
+aosp	https://android.googlesource.com/platform/external/kernel-headers (fetch)
+aosp	https://android.googlesource.com/platform/external/kernel-headers (push)
+
+
+================================================
+external/libnfc-nxp @ Sat Jun  6 16:00:47 EEST 2026
+================================================
++ cd /home/nekit/halium-11.0
++ repo status external/libnfc-nxp
+nothing to commit (working directory clean)
++ cd /home/nekit/halium-11.0/external/libnfc-nxp
++ git show-ref --head
+e4fb0694ac4eb888f098598bd895587b71747ce5 HEAD
+e4fb0694ac4eb888f098598bd895587b71747ce5 refs/remotes/github/lineage-18.1
+e4fb0694ac4eb888f098598bd895587b71747ce5 refs/remotes/m/halium-11.0
++ git remote -v
+github	https://github.com/LineageOS/android_external_libnfc-nxp (fetch)
+github	https://github.com/LineageOS/android_external_libnfc-nxp (push)
+
+
