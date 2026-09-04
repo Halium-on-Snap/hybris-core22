@@ -198,14 +198,14 @@ parts:
       DESTDIR=$CRAFT_PART_INSTALL make install
     override-prime: |
       craftctl default
+
       # Move libhybris where it belongs
       rm -f ${CRAFT_PRIME}/usr/lib/*.la
-      [ -e ${CRAFT_PRIME}/usr/lib/libEGL_libhybris.so ] && \
-          mv ${CRAFT_PRIME}/usr/lib/*.so* ${CRAFT_PRIME}/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}/
-      [ -d ${CRAFT_PRIME}/usr/lib/libhybris ] && \
-        mv ${CRAFT_PRIME}/usr/lib/libhybris ${CRAFT_PRIME}/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}/
-      [ -d ${CRAFT_PRIME}/usr/lib/pkgconfig ] && \
-        rm -rf ${CRAFT_PRIME}/usr/lib/pkgconfig
+      cp -a ${CRAFT_PRIME}/usr/lib/*.so* ${CRAFT_PRIME}/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}/ || true
+      rm -rf ${CRAFT_PRIME}/usr/lib/*.so*
+      cp -a ${CRAFT_PRIME}/usr/lib/libhybris ${CRAFT_PRIME}/usr/lib/${CRAFT_ARCH_TRIPLET_BUILD_FOR}/libhybris || true
+      rm -rf ${CRAFT_PRIME}/usr/lib/libhybris
+      rm -rf ${CRAFT_PRIME}/usr/lib/pkgconfig
     # prime:
     #   - usr/lib
 
